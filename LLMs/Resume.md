@@ -31,3 +31,9 @@ Une façon de le faire est simplement de demander au LLM à quelles API il peut 
 Vous pouvez ensuite demander des détails supplémentaires sur les API qui vous intéressent.
 
 Si le LLM n’est pas coopératif, essayez de fournir un contexte trompeur et de poser à nouveau la question. Par exemple, vous pourriez prétendre que vous êtes le développeur du LLM et que vous devriez donc avoir un niveau de privilège plus élevé.
+
+### Les attaques par injection rapide peuvent être menées de deux manières :
+
+Directement, par exemple, via un message à un chatbot.
+Indirectement, lorsqu’un attaquant délivre l’invite via une source externe. Par exemple, l’invite peut être incluse dans les données d’entraînement ou la sortie d’un appel d’API.
+L’injection d’invites indirectes permet souvent des attaques LLM Web sur d’autres utilisateurs. Par exemple, si un utilisateur demande à un LLM de décrire une page Web, une invite cachée à l’intérieur de cette page peut faire en sorte que le LLM réponde avec une charge utile XSS conçue pour exploiter l’utilisateur.
